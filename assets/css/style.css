@@ -1,0 +1,100 @@
+.bg{
+    background: url(https://www.niarratravel.com/static/1627977236/assets/img/dummy/webgl/diffuse-map.jpg);
+    background-size: cover;
+    min-height: 1200px;
+    position: relative;
+}
+#head-menu{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    transition: 1s;
+    z-index: 232;
+}
+
+.overly{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.357);
+}
+.logo-box .logo{
+    transition: 1s;
+}
+.logo-box.active .logo{
+    filter: invert(1);
+}
+.menu{
+    grid-gap: 20px;
+    justify-content: flex-end;
+    align-items: center;
+    text-transform: uppercase;
+}
+.menu .nav-link, .menu .btn.btn-success.text-light{
+    font-size: 13px;
+    font-weight: 600;
+}
+.container .row *[class*=col]{
+    z-index: 32445;
+}
+.dropdown-toggle::after{
+    vertical-align: middle;
+}
+.btn.btn-success.text-light {
+    padding: 13px 35px;
+    border-radius: 52px;
+    transition: 0.5s all;
+}
+
+.btn.btn-success.text-light:hover{
+    background: #fc6220;
+}
+.logo-box svg{
+    fill: #fff !important;
+}
+.menu-two ul.dropdown-menu {
+    min-width: 85px;
+    text-align: center;
+}
+
+
+.menu-item {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    transition: 1s ease-out;
+}
+.menu-item.active{
+    top: 0;
+}
+.enquery{
+    position: fixed;
+    top: 0%;
+    right: -100%;
+    width: 70%;
+    height: 100%;
+    background: #283a2c;
+    transition: 1s ease-out;
+    z-index: 5654654654;
+}
+.enquery.active{
+    right: 00%;
+}
+.nav-link{
+    transition: 1s all;
+}
+*[class *= menu-].active .nav-link{
+    color: #333!important;
+}
+
+.nav-link.clicked.dropdown-toggle::after {
+    transform: rotate(
+180deg
+);
+}
