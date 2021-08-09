@@ -83,7 +83,24 @@ $('.menu-items-row ul li').on('mouseover', function(){
 })
 
 
+$('.button-close.en').click(() => {
+  $('#enquery').removeClass('active')
+})
 
+$('.enquery-from .row label').click((e) => {
+  var input = e.target.nextSibling.nextSibling;
+  input.placeholder = input.getAttribute('data-placeholder')
+  input.focus()
+  e.target.classList.toggle('active')
+})
+$('.enquery-from .row input, .enquery-from .row texarea').on('focusout', (e)=>{
+  if(e.target.value.length == 0){
+    e.target.previousSibling.previousSibling.classList.remove('active')
+  }else{
+    e.target.previousSibling.previousSibling.classList.add('active')
+  }
+  e.target.placeholder = ""
+})
 function randomBetween(min, max){
   return Math.floor(Math.random() * (max - min + 1) + min);
 
