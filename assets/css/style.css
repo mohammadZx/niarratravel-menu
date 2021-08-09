@@ -4,6 +4,9 @@
     min-height: 1200px;
     position: relative;
 }
+.hide{
+    overflow: hidden;
+}
 #head-menu{
     position: fixed;
     left: 0;
@@ -92,9 +95,49 @@
 *[class *= menu-].active .nav-link{
     color: #333!important;
 }
-
+.menu-items-row{
+    margin-top: 70px;
+}
+.list-group{
+    list-style: none;
+}
+.list-group li a{
+    text-decoration: none;
+    font-weight: 200;
+    font-family: Wlk;
+}
+.list-group li a:hover{
+    color: #b1b886 !important;
+}
 .nav-link.clicked.dropdown-toggle::after {
     transform: rotate(
 180deg
 );
 }
+
+
+.menu-items-row .preve-image,.menu-items-row .current-image{
+    height: 430px;
+    width: 301px;
+    transition: 1s all;
+   background-size: cover !important;
+}
+.preve-image {
+    position: absolute;
+    transform: translate(69px, 29px);
+    z-index: -1;
+}
+
+.current-image {
+    z-index: 2;
+    background: url(file:///C:/Users/mohammad/Desktop/second/assets/img/alexander-aashiesh-kathmandu-unsplash.jpg);
+}
+a.display-6.text-dark {
+    font-size: 2.4rem;
+}
+@font-face {
+    font-family: Wlk;
+    src: url('../font/wulkan-display-medium.woff2') format('woff2');
+}
+
+
